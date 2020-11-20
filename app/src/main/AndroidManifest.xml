@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.reactiontest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PlanMain" />
+        <activity android:name=".ProgressMain" />
+        <activity android:name=".IncomeMain" />
+        <activity android:name=".ExpensesMain" />
+        <activity android:name=".ProfileMain" />
+        <activity android:name=".ExpensesFirstSetup" />
+        <activity android:name=".IncomeFirstSetup" />
+        <activity android:name=".ProfileFirstSetup" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".PassReset" />
+        <activity android:name=".ActivateEmail" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

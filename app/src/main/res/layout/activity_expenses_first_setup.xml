@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpensesFirstSetup">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background_fade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/relativeLayout3"
+            android:orientation="vertical"
+            android:transitionName="frame"
+            android:layout_width="match_parent"
+            android:layout_height="470dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_white_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/t11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Expenses"
+
+                android:textColor="#00A32C"
+                android:textSize="42sp" />
+
+
+            <ScrollView
+
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/t11">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Rent/Mortgage"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_name2"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/rent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p1"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Groceries"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_name1"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/groceries"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p2"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Transportation"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/target"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/transport"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p3"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Utilities"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_name3"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/utilities"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p4"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Medical"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_name4"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/medical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p5"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Loans"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_name5"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/loans"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p6"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Clothing"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_name5s"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/clothing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p7"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Restaurants"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_nam6e5"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/restaurants"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p8"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Entertainment"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_n6ame5"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/entertainment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p9"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Holidays"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_nam8e5"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/holidays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p10"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Others"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/setup_nam3e5"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp">
+
+                            <EditText
+                                android:id="@+id/others"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@android:color/transparent"
+                                android:ems="9"
+                                android:gravity="center"
+                                android:hint="Enter"
+                                android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonEnext"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="FINISH"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

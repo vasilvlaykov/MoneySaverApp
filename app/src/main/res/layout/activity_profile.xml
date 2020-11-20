@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/profStart"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@drawable/top_banner_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:onClick="toProfileEdit"
+                    android:src="@drawable/user_profile"
+                    app:civ_border_color="#000000"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/main_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Vasko"
+                    android:textColor="@android:color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/round_white_corners"
+            android:orientation="vertical"
+            android:transitionName="frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:onClick="goToEditIncome"
+                        android:src="@drawable/income"
+                        app:civ_border_color="#7E7E7E"
+                        app:civ_border_width="3dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv1"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Income"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:onClick="goToEditExpenses"
+                        android:src="@drawable/expenses"
+                        app:civ_border_color="#7E7E7E"
+                        app:civ_border_width="3dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv2"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Expenses"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv3"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:onClick="goToProgress"
+                        android:src="@drawable/progress"
+                        app:civ_border_color="#7E7E7E"
+                        app:civ_border_width="3dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv3"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Progress"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv4"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:onClick="goToPlan"
+                        android:src="@drawable/plan"
+                        app:civ_border_color="#7E7E7E"
+                        app:civ_border_width="3dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv4"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Plan"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:max="1500"
+            android:scaleY="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:paddingRight="15dp"
+            android:text=" / "
+            android:textColor="#18E300"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sum_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="0"
+            android:textColor="#18E300"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintEnd_toStartOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/euro_text_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="€"
+            android:textColor="#18E300"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/sum_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="0"
+            android:textColor="#18E300"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintStart_toEndOf="@+id/euro_text_r" />
+
+        <TextView
+            android:id="@+id/euro_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="€"
+            android:textColor="#18E300"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintEnd_toStartOf="@+id/sum_left" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

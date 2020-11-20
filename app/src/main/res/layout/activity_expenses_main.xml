@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpensesMain">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background_fade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:transitionName="frame"
+            android:layout_width="match_parent"
+            android:layout_height="470dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_white_corners"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/t11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Your Expenses"
+
+                android:textColor="#00A32C"
+                android:textSize="42sp" />
+
+
+            <ScrollView
+
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/t11">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Rent/Mortgage"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_rent"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editRent"/>
+
+                        <TextView
+                            android:id="@+id/tv_rent"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editRent">
+
+
+                    </TextView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p1"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Groceries"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_groc"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editGroc"/>
+
+                        <TextView
+                            android:id="@+id/tv_groc"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editGroc" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p2"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Transportation"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_trans"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editTrans"/>
+
+                        <TextView
+                            android:id="@+id/tv_trans"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editTrans"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p3"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Utilities"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_util"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editUtil"/>
+
+                        <TextView
+                            android:id="@+id/tv_util"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editUtil"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p4"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Medical"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_med"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editMed"/>
+
+                        <TextView
+                            android:id="@+id/tv_med"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editMed"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p5"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Loans"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_loans"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editLoans" />
+
+                        <TextView
+                            android:id="@+id/tv_loans"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editLoans"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p6"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Clothing"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_cloth"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editCloth"/>
+
+                        <TextView
+                            android:id="@+id/tv_cloth"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editCloth" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p7"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Restaurants"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_rest"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editRest" />
+
+                        <TextView
+                            android:id="@+id/tv_rest"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editRest"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p8"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Entertainment"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_ent"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editEnt" />
+
+                        <TextView
+                            android:id="@+id/tv_ent"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editEnt" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p9"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Holidays"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_hol"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editHol" />
+
+                        <TextView
+                            android:id="@+id/tv_hol"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editHol" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/p11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/p10"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Others"
+                            android:textColor="#00C134"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_toStartOf="@+id/tv_others"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:onClick="editOthers" />
+
+                        <TextView
+                            android:id="@+id/tv_others"
+                            style="bold"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="center"
+                            android:paddingVertical="6dp"
+                            android:text="0"
+                            android:textColor="#404040"
+                            android:textSize="22sp"
+                            android:onClick="editOthers"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/s_b_expenses_main"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="SAVE &amp; BACK"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
